@@ -1,0 +1,43 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Almacen.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:p1="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Almacen.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Almacen">
+
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    <Grid ShowGridLines="True" ColumnDefinitions="*" RowDefinitions="6*,*" Background="DarkGray">
+        <Border Margin="30" BorderThickness="3" BorderBrush="Cyan" CornerRadius="20" Background="Gray" BoxShadow="5 5 5 DarkCyan">
+                <TabControl Grid.Row="0" FontSize="21" SelectedIndex="{Binding SelectedTab}">
+                    <TabItem Header="Pestaña 1" VerticalAlignment="Top" >
+                        <ComboBox SelectedItem="{Binding Componente.Categoria}" ItemsSource="{Binding ListaCategorías}" VerticalAlignment="Top" Width="300" Theme="{StaticResource MaterialOutlineComboBox}" p1:ComboBoxAssist.Label="Categoría" Classes="dense" >
+                        </ComboBox>
+                    </TabItem>
+                    <TabItem Header="Pestaña 2">
+                    
+                    </TabItem>
+                    <TabItem Header="Pestaña 3">
+                    
+                    </TabItem>
+                </TabControl>
+        </Border>
+        
+        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" Spacing="40">
+            <Button CommandParameter="-1"
+                    Command="{Binding CambiarTabCommand}" FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Atrás" Background="LightCoral" Width="200" Height="50"></Button>
+            <Button FontSize="30" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Siguiente" Background="LightGreen" Width="200" Height="50"
+                    CommandParameter="1"
+                    Command="{Binding CambiarTabCommand}"></Button>
+        </StackPanel>
+    </Grid>
+
+</Window>

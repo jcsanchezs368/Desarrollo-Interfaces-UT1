@@ -1,0 +1,145 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PrimerProyecto.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Width="800"
+        Height="800"
+        WindowStartupLocation="CenterScreen"
+        RequestedThemeVariant="Light"
+        MinHeight="400"
+        MinWidth="750"
+        MaxHeight="900"
+        MaxWidth="900"
+        CanResize="True"
+        WindowDecorations="Full"
+        Topmost="True"
+        x:Class="PrimerProyecto.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="PrimerProyecto">
+    
+    <Window.Background>
+        <ImageBrush Source="avares://PrimerProyecto/Assets/mar.jpg" Stretch="Fill"/>    
+    </Window.Background>
+    
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainViewModel />
+    </Design.DataContext>
+    
+    <!-- <StackPanel  Background="MediumPurple" HorizontalAlignment="Center" VerticalAlignment="Center"> -->
+    <!--     <TextBlock Text="Indica tu nombre" HorizontalAlignment="Right"/> -->
+    <!-- <TextBox Text="{Binding Path=Greeting}" -->
+    <!--          HorizontalAlignment="Center" -->
+    <!--          VerticalAlignment="Center" -->
+    <!--          FontSize="60" -->
+    <!--          FontFamily="Comic Sans MS" -->
+    <!--          Background="Black" -->
+    <!-- /> -->
+    <!--     <Image Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/> -->
+    <!-- </StackPanel> -->
+    <!-- -->
+    <TabControl>
+        <!--<TabItem Header="Pagina 1">
+            <Grid ShowGridLines="True"
+                          RowDefinitions="*,*,*"
+                          ColumnDefinitions="*,*,*"
+                          RowSpacing="10"
+                          ColumnSpacing="30">
+                <Border Grid.Row="0"  Grid.Column="0" BorderBrush="Black"
+                                BorderThickness="2"
+                                CornerRadius="10"
+                                Margin="5,20"
+                                Background="WhiteSmoke"
+                                BoxShadow="5 5 2 gray"
+                                Padding="10">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="SOFTWARE" Foreground="Green" FontSize="20"
+                           TextAlignment="Center" FontWeight="Heavy" FontFamily="Comic Sans MS"/>
+                <TextBlock Foreground="Black" Text="Buenas tardes no sé qué escribir. Lore ipsum dolot aemet viva españa" TextWrapping="WrapWithOverflow"
+                           TextAlignment="Center"/>
+            </StackPanel>
+        </Border>        
+        <Border Grid.Row="1"  Grid.Column="0" BorderBrush="Black"
+                BorderThickness="2"
+                CornerRadius="10"
+                Margin="5,20"
+                Background="WhiteSmoke"
+                BoxShadow="5 5 2 gray">
+            <StackPanel>
+                <ComboBox HorizontalAlignment="Stretch" >
+                    <ComboBoxItem  Content="Gambas"/>
+                    <ComboBoxItem Content="Gambones"/>
+                    <ComboBoxItem Content="Langostas"/>
+                </ComboBox>
+                <CheckBox  Content="Aceptar vender tu alma a ErciGambas" Foreground="Black" IsChecked="True"/>
+                <Button Content="ACEPTAR" HorizontalAlignment="Center" Background="LightGreen" BorderBrush="Gray" />
+            </StackPanel>
+            
+        </Border>
+        <Image Grid.Row="0" Grid.Column="1" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="0" Grid.Column="2" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="1" Grid.Column="1" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="1" Grid.Column="2" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="2" Grid.Column="0" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="2" Grid.Column="1" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Image Grid.Row="2" Grid.Column="2" Source="avares://PrimerProyecto/Assets/gamba.png" Width="200" Height="200" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+    </Grid>
+        </TabItem>-->
+        <TabItem Header="Formulario">
+            <Grid ShowGridLines="True" Background="White" RowDefinitions="5*,3*,3*,3*,3*,3*,2*"
+                  ColumnDefinitions="*">
+                <Border Background="LightBlue" CornerRadius="20" BoxShadow="5 5 3 gray" Margin="30 10">
+                    <Grid ShowGridLines="False"  ColumnDefinitions="*,3*" RowDefinitions="*,*">
+                        <Image Grid.RowSpan="2" Grid.Row="0" Grid.Column="0" Source="avares://PrimerProyecto/Assets/gamba.png" Width="150" Height="150" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="Formulario de admisión a ErciGambas" FontSize="30" FontFamily="Times New Roman" FontWeight="Heavy" VerticalAlignment="Bottom"></TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="Prueba si eres digno de formar parte de nuestro equipo" FontSize="16" FontFamily="Arial" FontWeight="Light" VerticalAlignment="Top"></TextBlock>
+                    </Grid>
+                </Border>
+                <Border Grid.Row="1">
+                    
+                </Border>
+                <Grid Grid.Row="1" ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Center" Text="Nombre" FontWeight="Bold" ></TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="1" PlaceholderText="Introduce tu nombre" HorizontalAlignment="Center"></TextBox>
+                </Grid>
+                
+                <Grid Grid.Row="2" ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Center" Text="Correo" FontWeight="Bold" ></TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="1" PlaceholderText="Ej: gestion@ercigambas.es" HorizontalAlignment="Center"></TextBox>
+                </Grid>
+                
+                <Grid Grid.Row="3" ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Center" Text="Teléefono" FontWeight="Bold" ></TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="1" PlaceholderText="Ej: 999 999 999 " HorizontalAlignment="Center"></TextBox>
+                </Grid>
+                
+                <Grid Grid.Row="4" ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Center" Text="Nombre" FontWeight="Bold" ></TextBlock>
+                    <TextBox VerticalAlignment="Center" Grid.Row="1" PlaceholderText="Introduce tu nombre" HorizontalAlignment="Center"></TextBox>
+                </Grid>
+                
+                <Grid Grid.Row="5" ShowGridLines="False" RowDefinitions="*,*" ColumnDefinitions="*">
+                    <TextBlock VerticalAlignment="Center" Grid.Row="0" HorizontalAlignment="Center" Text="Fecha de nacimiento" FontWeight="Bold" ></TextBlock>
+                    
+                </Grid>
+                <Grid Grid.Row="6" ShowGridLines="False" RowDefinitions="*" ColumnDefinitions="*">
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <Button Width="200" Background="LightGreen" HorizontalAlignment="Center">Aceptar</Button>
+                        <Button Width="200" Background="LightCoral" HorizontalAlignment="Center">Cancelar</Button>
+                    </StackPanel>
+                </Grid>
+                
+                
+            </Grid>
+        </TabItem>
+    </TabControl>
+    
+
+    
+
+</Window>
