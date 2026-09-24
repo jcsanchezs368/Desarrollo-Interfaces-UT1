@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KKfGrs2PhiE=",
+  "dgSpecHash": "qdsDaK0ZII8=",
   "success": true,
   "projectFilePath": "C:\\Users\\ciclos\\RiderProjects\\Almacen\\Almacen\\Almacen.csproj",
   "expectedPackageFiles": [
@@ -20,12 +20,14 @@
     "C:\\Users\\ciclos\\.nuget\\packages\\avalonia.x11\\12.1.2\\avalonia.x11.12.1.2.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\avaloniaui.diagnosticssupport\\2.2.3\\avaloniaui.diagnosticssupport.2.2.3.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\communitytoolkit.mvvm\\8.4.2\\communitytoolkit.mvvm.8.4.2.nupkg.sha512",
+    "C:\\Users\\ciclos\\.nuget\\packages\\dialoghost.avalonia\\0.12.1-nightly.0.1\\dialoghost.avalonia.0.12.1-nightly.0.1.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\harfbuzzsharp\\8.3.1.3\\harfbuzzsharp.8.3.1.3.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.3\\harfbuzzsharp.nativeassets.linux.8.3.1.3.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\8.3.1.3\\harfbuzzsharp.nativeassets.macos.8.3.1.3.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\harfbuzzsharp.nativeassets.webassembly\\8.3.1.3\\harfbuzzsharp.nativeassets.webassembly.8.3.1.3.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\8.3.1.3\\harfbuzzsharp.nativeassets.win32.8.3.1.3.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\material.avalonia\\3.20.0\\material.avalonia.3.20.0.nupkg.sha512",
+    "C:\\Users\\ciclos\\.nuget\\packages\\messagebox.avalonia\\12.0.0\\messagebox.avalonia.12.0.0.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\microcom.runtime\\0.11.6\\microcom.runtime.0.11.6.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\ciclos\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",

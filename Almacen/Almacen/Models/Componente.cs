@@ -1,12 +1,16 @@
+using System;
+using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace Almacen.Models;
 
-public class Componente
+public partial class Componente:ObservableObject
 {
-    public string Categoria { get; set; }
-    public string Nombre { get; set; }
-    public string Descripcion { get; set; }
-    public double Precio { get; set; }
-    public int Cantidad { get; set; }
-    public bool Disponible { get; set; }
-    
+    [ObservableProperty] private string _categoria = "";
+    [ObservableProperty] private string _referencia = "";
+    [ObservableProperty] private string _nombre = "";
+    [ObservableProperty] private string _descripcion = string.Empty;
+    [ObservableProperty] private decimal _precio = 0;
+    [ObservableProperty] private int _cantidad = 0;
+    [ObservableProperty] private bool _disponible = false;
+    [ObservableProperty] private DateTime _fecha  = DateTime.Now;
 }
