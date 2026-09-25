@@ -28,6 +28,7 @@
                             <TextBox Text="{Binding Componente.Referencia}" UseFloatingPlaceholder="True" Classes="outline" Theme="{StaticResource OutlineTextBox}" p1:TextFieldAssist.Label="Referencia"/>
                             <TextBox Text="{Binding Componente.Nombre}" UseFloatingPlaceholder="True" Classes="outline" Theme="{StaticResource OutlineTextBox}" p1:TextFieldAssist.Label="Nombre"/>
                             <TextBox Text="{Binding Componente.Descripcion}" UseFloatingPlaceholder="True" p1:TextFieldAssist.Label="Descripción" Classes="outline" Theme="{StaticResource OutlineTextBox}" MaxHeight="100" AcceptsReturn="True" TextWrapping="Wrap"/>
+                            <TextBlock Text="{Binding Mensaje}" TextAlignment="Center" Foreground="Red" FontWeight="Bold" Margin="10" FontSize="18"></TextBlock>
                         </StackPanel>
                     </TabItem>
                     <TabItem Header="Pestaña 2">

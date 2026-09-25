@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Almacen.Models;
+using Almacen.Services;
 using Avalonia.Collections;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -24,6 +25,11 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty] private bool _atrasVisible = false;
     [ObservableProperty] private bool _finalizarVisible = false;
     [ObservableProperty] private bool _siguienteVisible = true;
+    [ObservableProperty] private string _mensaje = "";
+
+    private N8NService n8NService { get; set; } = new();
+    
+    
 
     public MainViewModel()
     {
@@ -33,6 +39,37 @@ public partial class MainViewModel : ViewModelBase
         ListaCategorías.Add("Peroférico");*/
     }
 
+    private bool ValidarMensaje()
+    {
+        Mensaje = "";
+        if (Componente.Categoria.Trim().Equals(String.Empty))
+        {
+            Mensaje += "La categoría es obligatoria\n";
+
+        }
+        if (Componente.Referencia.Trim().Equals(String.Empty))
+        {
+            Mensaje += "La referencia es obligatoria\n";
+
+        }
+
+        if (Componente.Nombre.Trim().Equals(String.Empty)){
+            Mensaje += "El nombre es obligatorio\n";
+
+        }
+        if (Componente.Descripcion.Trim().Equals(String.Empty))
+        {
+            Mensaje += "La descripción es obligatorio\n";
+
+        }
+
+        if (Mensaje != String.Empty)
+        {
+            return false;
+        }
+
+        return true;
+    }
 
 
     [RelayCommand]
@@ -40,10 +77,21 @@ public partial class MainViewModel : ViewModelBase
     {
         int n = int.Parse(numero);
 
-
+        
         if ((SelectedTab + n) >= 0 && (SelectedTab + n) <= 2)
         {
-            SelectedTab += n;
+            if (n > 0)
+            {
+                if (ValidarMensaje())
+                {
+                    SelectedTab += n;
+                }
+            }
+            else
+            {
+                SelectedTab += n;    
+            }
+            
         }
 
         ActualizarBotones();
@@ -57,6 +105,10 @@ public partial class MainViewModel : ViewModelBase
         if (!resultado)
         {
             await MostrarMensaje("Proceso cancelado");
+        }
+        else
+        {
+            await n8NService.Crear(Componente);
         }
     }
 
@@ -83,28 +135,6 @@ public partial class MainViewModel : ViewModelBase
             SiguienteVisible = false;
         }
 
-    }
-
-    public void ControladorTab1()
-    {
-        string mensaje_error = "";
-        if (Componente.Categoria == String.Empty)
-        {
-            mensaje_error += "La categoría es obligatoria\n";
-        }
-        if (Componente.Referencia == String.Empty)
-        {
-            mensaje_error += "La referencia es obligatoria\n";
-        }
-        if (Componente.Nombre == String.Empty)
-        {
-            mensaje_error += "El nombre es obligatorio\n";
-        }
-        if (Componente.Descripcion == String.Empty)
-        {
-            mensaje_error += "La descripción es obligatorio\n";
-        }
-        
     }
     
     private async Task MostrarMensaje(string mensaje)
