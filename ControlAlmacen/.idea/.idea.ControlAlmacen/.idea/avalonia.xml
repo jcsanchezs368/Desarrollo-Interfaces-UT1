@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ControlAlmacen/App.axaml" value="ControlAlmacen/ControlAlmacen.csproj" />
+        <entry key="ControlAlmacen/Views/AltaComponenteView.axaml" value="ControlAlmacen/ControlAlmacen.csproj" />
+        <entry key="ControlAlmacen/Views/ConsultasView.axaml" value="ControlAlmacen/ControlAlmacen.csproj" />
+        <entry key="ControlAlmacen/Views/HomeView.axaml" value="ControlAlmacen/ControlAlmacen.csproj" />
+        <entry key="ControlAlmacen/Views/MainWindow.axaml" value="ControlAlmacen/ControlAlmacen.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

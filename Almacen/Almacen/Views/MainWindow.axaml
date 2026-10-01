@@ -66,6 +66,27 @@
                             <TextBlock IsVisible="{Binding Componente.Disponible}" Grid.Column="1" Grid.Row="8" TextAlignment="Left" Text="{Binding Componente.Fecha, StringFormat='{}{0:dd/MM/yy}'}"> </TextBlock>
                         </Grid>
                     </TabItem>
+                    
+                    <TabItem Header="TABLA">
+                        <StackPanel>
+                            <Button Content="CARGAR TABLA"
+                                    Command="{Binding ObtenerComponentesCommand}"/>
+                            <ListBox ItemsSource="{Binding Componentes}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Padding="15" Margin="5" CornerRadius="10" BorderThickness="1" BorderBrush="Black">
+                                            <StackPanel>
+                                                <TextBlock Text="{Binding Categoria}"></TextBlock>
+                                                <TextBlock Text="{Binding Nombre}"></TextBlock>
+                                                <TextBlock Text="{Binding Descripcion}"></TextBlock>
+                                            </StackPanel>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>                            
+                        </StackPanel>
+                        
+                    </TabItem>
                 </TabControl>
         </Border>
         

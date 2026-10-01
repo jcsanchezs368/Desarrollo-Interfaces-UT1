@@ -1,0 +1,63 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:ControlAlmacen.ViewModels"
+             xmlns:p1="clr-namespace:Material.Styles.Assists;assembly=Material.Styles"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:AltaComponenteViewModel"
+             x:Class="ControlAlmacen.Views.AltaComponenteView">
+    <Design.DataContext>
+        <viewModels:AltaComponenteViewModel />
+    </Design.DataContext>
+    
+    <TabControl FontSize="21" SelectedIndex="{Binding SelectedTab}" Margin="100 0" >
+                    <TabItem Header="Pestaña 1">
+                        <StackPanel Orientation="Vertical" Margin="0 20 0 0" Spacing="5">
+                            <ComboBox SelectedItem="{Binding Componente.Categoria}" ItemsSource="{Binding ListaCategorías}" Theme="{StaticResource MaterialOutlineComboBox}" p1:ComboBoxAssist.Label="Categoría" Classes="dense" >
+                            </ComboBox>
+                            <TextBox Text="{Binding Componente.Referencia}" UseFloatingPlaceholder="True" Classes="outline" Theme="{StaticResource OutlineTextBox}" p1:TextFieldAssist.Label="Referencia"/>
+                            <TextBox Text="{Binding Componente.Nombre}" UseFloatingPlaceholder="True" Classes="outline" Theme="{StaticResource OutlineTextBox}" p1:TextFieldAssist.Label="Nombre"/>
+                            <TextBox Text="{Binding Componente.Descripcion}" UseFloatingPlaceholder="True" p1:TextFieldAssist.Label="Descripción" Classes="outline" Theme="{StaticResource OutlineTextBox}" MaxHeight="100" AcceptsReturn="True" TextWrapping="Wrap"/>
+                            <TextBlock Text="{Binding Mensaje}" TextAlignment="Center" Foreground="Red" FontWeight="Bold" Margin="10" FontSize="18"></TextBlock>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Pestaña 2">
+                        <StackPanel  Margin="0 20 0 0" Spacing="5">
+                            <TextBlock Text="Precio"></TextBlock>
+                            <NumericUpDown Value="{Binding Componente.Precio}" Theme="{StaticResource OutlineNumericUpDown}" ButtonSpinnerLocation="Left" Increment="0.05"/>
+                            <TextBlock Text="Cantidad"></TextBlock>
+                            <NumericUpDown Minimum="1" ParsingNumberStyle="Integer" Value="{Binding Componente.Cantidad}" Theme="{StaticResource OutlineNumericUpDown}" ButtonSpinnerLocation="Left" Increment="1"/>
+                            <CheckBox Content="Disponible" IsChecked="{Binding Componente.Disponible}" />
+                            <StackPanel IsVisible="{Binding Componente.Disponible}">
+                                <TextBlock Text="Fecha disponibilidad"></TextBlock>
+                                <CalendarDatePicker SelectedDate="{Binding Componente.Fecha}"  HorizontalAlignment="Stretch" p1:TextFieldAssist.Label="" />
+                            </StackPanel>
+                        </StackPanel>
+                    </TabItem>
+                    <TabItem Header="Resumen">
+                        <Grid ColumnDefinitions="*,*" RowDefinitions="*,*,*,*,*,*,*,*,*" ColumnSpacing="10">
+                            <TextBlock Grid.ColumnSpan="2" TextAlignment="Center" VerticalAlignment="Center">Resumen total del componente</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="1" TextAlignment="Right"> Categoría:</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="2" TextAlignment="Right"> Referencia:</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="3" TextAlignment="Right"> Nombre:</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="4" TextAlignment="Right"> Descripción:</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="5" TextAlignment="Right"> Precio:</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="6" TextAlignment="Right"> Cantidad:</TextBlock>
+                            <TextBlock Grid.Column="0" Grid.Row="7" TextAlignment="Right"> Disponible:</TextBlock>
+                            <TextBlock IsVisible="{Binding Componente.Disponible}" Grid.Column="0" Grid.Row="8" TextAlignment="Right"> Fecha:</TextBlock>
+                            
+                            <TextBlock Grid.Column="1" Grid.Row="1" TextAlignment="Left" Text="{Binding Componente.Categoria}"> </TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="2" TextAlignment="Left" Text="{Binding Componente.Referencia}"> </TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="3" TextAlignment="Left" Text="{Binding Componente.Nombre}"> </TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="4" TextAlignment="Left" Text="{Binding Componente.Descripcion}"> </TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="5" TextAlignment="Left" Text="{Binding Componente.Precio, StringFormat='{}{0:F2} €'}"> </TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="6" TextAlignment="Left" Text="{Binding Componente.Cantidad, StringFormat='{}{0} unidades'}"> </TextBlock>
+                            <TextBlock Grid.Column="1" Grid.Row="7" TextAlignment="Left" Text="{Binding Componente.Disponible}"> </TextBlock>
+                            <TextBlock IsVisible="{Binding Componente.Disponible}" Grid.Column="1" Grid.Row="8" TextAlignment="Left" Text="{Binding Componente.Fecha, StringFormat='{}{0:dd/MM/yy}'}"> </TextBlock>
+                        </Grid>
+                    </TabItem>
+        </TabControl>
+    
+    
+</UserControl>

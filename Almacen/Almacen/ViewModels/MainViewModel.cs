@@ -28,15 +28,31 @@ public partial class MainViewModel : ViewModelBase
     [ObservableProperty] private string _mensaje = "";
 
     private N8NService n8NService { get; set; } = new();
-    
-    
 
+    [ObservableProperty] private AvaloniaList<Componente> _componentes;
+    
+    [RelayCommand]
+    public async Task ObtenerComponentes()
+    {
+        Componentes = await n8NService.ObtenerComponentes();
+    }
     public MainViewModel()
     {
         /*ListaCategorías.Add("Peroférico");
         ListaCategorías.Add("RAM");
         ListaCategorías.Add("CPU");
         ListaCategorías.Add("Peroférico");*/
+    }
+
+    partial void OnSelectedTabChanged(int value)
+    {
+        Console.Write("OnSelectedTabChanged " + value);
+        if (value == 3)
+        {
+            ObtenerComponentes();
+        }
+        
+        ActualizarBotones();
     }
 
     private bool ValidarMensaje()
@@ -94,8 +110,6 @@ public partial class MainViewModel : ViewModelBase
             
         }
 
-        ActualizarBotones();
-
     }
 
     [RelayCommand]
@@ -105,11 +119,13 @@ public partial class MainViewModel : ViewModelBase
         if (!resultado)
         {
             await MostrarMensaje("Proceso cancelado");
-        }
-        else
+        }else
         {
             await n8NService.Crear(Componente);
+            SelectedTab = 3;
         }
+
+        
     }
 
     [RelayCommand]
@@ -135,6 +151,13 @@ public partial class MainViewModel : ViewModelBase
             SiguienteVisible = false;
         }
 
+        if (SelectedTab == 3)
+        {
+            FinalizarVisible = false;
+            SiguienteVisible = false;
+            AtrasVisible = true;
+        }
+
     }
     
     private async Task MostrarMensaje(string mensaje)
@@ -146,17 +169,12 @@ public partial class MainViewModel : ViewModelBase
     private async Task<bool> MensajeFinalizar()
     {
         var box = MessageBoxManager.GetMessageBoxStandard("Confirmar", "¿Quieres finalizar?", ButtonEnum.YesNo);
-        await box.ShowAsync();
-
         var resultado = await box.ShowAsync();
         if (resultado == ButtonResult.Yes)
         {
             return true;
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 
 }

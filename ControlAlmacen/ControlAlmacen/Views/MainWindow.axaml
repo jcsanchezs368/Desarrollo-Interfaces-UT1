@@ -1,0 +1,69 @@
+<suki:SukiWindow xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:ControlAlmacen.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+        xmlns:views="clr-namespace:ControlAlmacen.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="ControlAlmacen.Views.MainWindow"
+        x:DataType="vm:MainViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="ControlAlmacen">
+
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+    
+        <suki:SukiSideMenu IsSearchEnabled="True">
+            <suki:SukiSideMenu.Items>
+                <suki:SukiSideMenuItem Header="Inicio" Classes="Compact" >
+                    <suki:SukiSideMenuItem.Icon>
+                        <avalonia:MaterialIcon Kind="Home" Width="30" />
+                    </suki:SukiSideMenuItem.Icon>
+                    <suki:SukiSideMenuItem.PageContent>
+                        <!-- Page Content (Required) -->
+                        <views:HomeView />
+                    </suki:SukiSideMenuItem.PageContent>
+                </suki:SukiSideMenuItem>
+                
+                
+                <suki:SukiSideMenuItem Header="Alta" Classes="Compact" >
+                    <suki:SukiSideMenuItem.Icon>
+                        <!-- Icon -->
+                        <avalonia:MaterialIcon Kind="AddCircle" Width="30" />
+                    </suki:SukiSideMenuItem.Icon>
+                    <suki:SukiSideMenuItem.PageContent>
+                        <!-- Page Content (Required) -->
+                        <views:AltaComponenteView />
+                    </suki:SukiSideMenuItem.PageContent>
+                </suki:SukiSideMenuItem>
+                
+                
+                <suki:SukiSideMenuItem Header="Consultas" Classes="Compact" >
+                    <suki:SukiSideMenuItem.Icon>
+                        <!-- Icon -->
+                        <avalonia:MaterialIcon Kind="SqlQuery" Width="30" />
+                    </suki:SukiSideMenuItem.Icon>
+                    <suki:SukiSideMenuItem.PageContent>
+                        <!-- Page Content (Required) -->
+                        <views:ConsultasView />
+                    </suki:SukiSideMenuItem.PageContent>
+                </suki:SukiSideMenuItem>
+
+                <!-- Other Pages -->
+
+            </suki:SukiSideMenu.Items>
+
+
+            <suki:SukiSideMenu.HeaderContent>
+                <!-- Header Content -->
+            </suki:SukiSideMenu.HeaderContent>
+
+            <suki:SukiSideMenu.FooterContent>
+                <!-- Footer Content -->
+            </suki:SukiSideMenu.FooterContent>
+        </suki:SukiSideMenu>
+
+</suki:SukiWindow>
