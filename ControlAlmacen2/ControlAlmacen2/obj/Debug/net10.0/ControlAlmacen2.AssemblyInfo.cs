@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ControlAlmacen2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fdd68942ea048ddadfaa0d46b4e581f108d151d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ControlAlmacen2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ControlAlmacen2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
