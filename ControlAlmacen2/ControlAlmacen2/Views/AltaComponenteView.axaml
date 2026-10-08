@@ -1,0 +1,99 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
+             xmlns:viewModels="clr-namespace:ControlAlmacen2.ViewModels"
+             xmlns:suki="https://github.com/kikipoulet/SukiUI"
+             xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewModels:AltaComponenteViewModel"
+             x:Class="ControlAlmacen2.Views.AltaComponenteView">
+    <Design.DataContext>
+        <viewModels:AltaComponenteViewModel />
+    </Design.DataContext>
+    
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid ShowGridLines="True" ColumnDefinitions="*,*" RowDefinitions="*" ColumnSpacing="20">
+            <StackPanel Grid.Column="0" Margin="30">
+                <TextBlock Text="Nuevo producto" FontSize="30" FontWeight="Bold" Margin="0 0 0 0"/>
+                <TextBlock Text="Añade un nuevo producto al catálogo" Margin="0 20"/>
+                <suki:GlassCard IsInteractive="True" IsOpaque="False">
+                    <StackPanel Margin="10">
+                        <StackPanel Orientation="Horizontal">
+                            <avalonia:MaterialIcon Kind="Info" />
+                            <TextBlock Text="Información general" FontWeight="Bold" FontSize="20"/>    
+                        </StackPanel>
+                            
+                        <TextBlock Text="Informacion para identificar el producto" Margin="0 10"/>
+                        <TextBlock Text="Nombre" FontWeight="Bold"></TextBlock>
+                        <TextBlock Text="Código" FontWeight="Bold"></TextBlock>
+                            
+                        <StackPanel>
+                            <TextBlock Text="Tipo" FontWeight="Bold"></TextBlock>
+                            <TextBlock Text="Categoría" FontWeight="Bold"></TextBlock>
+                        </StackPanel>
+                            
+                        <StackPanel>
+                            <TextBlock Text="Marca" FontWeight="Bold"></TextBlock>
+                            <TextBlock Text="Descripción" FontWeight="Bold"></TextBlock>
+                        </StackPanel>
+                        
+                    </StackPanel>
+                </suki:GlassCard>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="20">
+                <suki:GlassCard IsInteractive="True" IsOpaque="False">
+                        <StackPanel>
+                            <StackPanel>
+                                <TextBlock Text="Imagen" FontWeight="Bold" FontSize="20" />
+                                <TextBlock Text="Imagen principal del producto" FontSize="12" Margin="0 20" />
+                                <suki:GlassCard IsInteractive="True" IsOpaque="False">
+                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0">
+                                        <Image IsVisible="{Binding MostrarImagen}" Width="400" Height="400" Stretch="UniformToFill" Source="{Binding Imagen}"/>
+                                        <StackPanel IsVisible="{Binding !MostrarImagen}">
+                                            <avalonia:MaterialIcon Width="30" Margin="0 20" Kind="ImageAdd" Foreground="LightGray"/>
+                                            <TextBlock TextAlignment="Center" Text="Sin imagen" Margin="0 5" Foreground="LightGray"/>
+                                            <TextBlock TextAlignment="Center" Text="PNG, JPG o WEBP" FontSize="10" Foreground="LightGray"/>
+                                        </StackPanel>
+                                        </StackPanel>
+                                </suki:GlassCard>
+                                    
+                            
+                                
+                                <Button
+                                    Command="{Binding SeleccionarImagenCommand}"
+                                    Width="280"
+                                    Height="49"
+                                    Margin="0,18,0,0"
+                                    BorderBrush="DodgerBlue">
+
+                                    <StackPanel
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Spacing="10">
+
+                                        <avalonia:MaterialIcon
+                                            Kind="FileUpload"
+                                            Width="18"
+                                            Height="18"
+                                            Foreground="DodgerBlue"/>
+
+                                        <TextBlock
+                                            Text="Seleccionar imagen"
+                                            VerticalAlignment="Center"
+                                            Foreground="DodgerBlue"
+                                            FontSize="16"/>
+
+                                    </StackPanel>
+                                </Button>
+                                </StackPanel>
+                            
+                        </StackPanel>
+            </suki:GlassCard>
+            </StackPanel>
+            
+        </Grid>
+    </ScrollViewer>
+</UserControl>

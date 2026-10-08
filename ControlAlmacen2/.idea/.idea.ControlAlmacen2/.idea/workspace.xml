@@ -5,24 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04f5736a-60f6-4fe6-b949-a9decc32e745" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ControlAlmacen2/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControlAlmacen2.sln" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControlAlmacen2/ViewModels/AltaComponenteViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControlAlmacen2/Views/AltaComponenteView.axaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ControlAlmacen2/Views/AltaComponenteView.axaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/ControlAlmacen.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/ControlAlmacen.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/ControlAlmacen.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/ControlAlmacen.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/Debug/net10.0/ControlAlmacen.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/../ControlAlmacen/ControlAlmacen/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ControlAlmacen2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ControlAlmacen2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlAlmacen2/App.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/App.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/ControlAlmacen2.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/ControlAlmacen2.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControlAlmacen2/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlAlmacen2/Views/MainWindow.axaml" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/Views/MainWindow.axaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/ControlAlmacen2.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/ControlAlmacen2.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/ControlAlmacen2.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/ControlAlmacen2.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/ControlAlmacen2.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/ControlAlmacen2.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/Avalonia/Resources.Inputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/Avalonia/resources" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/Avalonia/resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.AssemblyInfoInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.GlobalUsings.g.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/Debug/net10.0/ControlAlmacen2.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/rider.project.model.nuget.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ControlAlmacen2/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/ControlAlmacen2/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,31 +45,47 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 7
-}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ControlAlmacen2/Services/FilePickerService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ControlAlmacen2/Services/N8NService.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ControlAlmacen2/ViewModels/AltaComponenteViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ControlAlmacen2/Views/AltaComponenteView.axaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ControlAlmacen2/Views/AltaComponenteView.axaml.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="3KNSs8U9oZlOPbPoHHcKt1l4dc0" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "cidr.known.project.marker": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.ControlAlmacen2.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ControlAlmacen2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -112,5 +143,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
