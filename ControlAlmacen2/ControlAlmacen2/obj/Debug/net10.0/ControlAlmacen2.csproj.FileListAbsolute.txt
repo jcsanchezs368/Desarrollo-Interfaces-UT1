@@ -99,3 +99,12 @@ C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Mat
 C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\SukiUI.dll
 C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\System.Linq.Dynamic.Core.dll
 C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\AsyncImageLoader.Avalonia.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Animations.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactions.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactions.Custom.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactions.DragAndDrop.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactions.Draggable.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactions.Events.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactions.Responsive.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\Xaml.Behaviors.Interactivity.dll
+C:\Users\dam\RiderProjects\ControlAlmacen2\ControlAlmacen2\bin\Debug\net10.0\DialogHost.Avalonia.dll

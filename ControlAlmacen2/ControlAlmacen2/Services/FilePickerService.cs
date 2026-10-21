@@ -23,7 +23,7 @@ public class FilePickerService
             {
                 Title = "Selecciona Imagen",
                 AllowMultiple = false,
-                FileTypeFilter = [ new FilePickerFileType("Imagenes ")
+                FileTypeFilter = [ new FilePickerFileType("Imagenes")
                 {
                     Patterns = ["*.jpg", "*.jpeg", "*.png", "*.webp"]
                 } ]

@@ -10,6 +10,5 @@ public partial class AltaComponenteView : UserControl
     public AltaComponenteView()
     {
         InitializeComponent();
-        DataContext = new AltaComponenteViewModel();
     }
 }

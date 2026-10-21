@@ -6,9 +6,6 @@ using ControlAlmacen2.ViewModels;
 
 namespace ControlAlmacen2;
 
-/// <summary>
-/// Given a view model, returns the corresponding view if possible.
-/// </summary>
 [RequiresUnreferencedCode(
     "Default implementation of ViewLocator involves reflection which may be trimmed away.",
     Url = "https://docs.avaloniaui.net/docs/concepts/view-locator")]
@@ -19,19 +16,26 @@ public class ViewLocator : IDataTemplate
         if (param is null)
             return null;
 
-        var name = param.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
-        var type = Type.GetType(name);
+        var viewModelName = param.GetType().FullName!;
 
-        if (type != null)
-        {
+        var viewName = viewModelName
+            .Replace(".ViewModels.", ".Views.", StringComparison.Ordinal)
+            .Replace("ViewModel", "View", StringComparison.Ordinal);
+
+        var type = Type.GetType(viewName);
+
+        if (type is not null)
             return (Control)Activator.CreateInstance(type)!;
-        }
 
-        return new TextBlock { Text = "Not Found: " + name };
+        return new TextBlock
+        {
+            Text = $"No se ha encontrado la vista: {viewName}"
+        };
     }
 
     public bool Match(object? data)
     {
         return data is ViewModelBase;
     }
+
 }

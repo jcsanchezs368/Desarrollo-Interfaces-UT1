@@ -9,9 +9,6 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:DataType="viewModels:AltaComponenteViewModel"
              x:Class="ControlAlmacen2.Views.AltaComponenteView">
-    <Design.DataContext>
-        <viewModels:AltaComponenteViewModel />
-    </Design.DataContext>
     
     <ScrollViewer HorizontalScrollBarVisibility="Disabled"
                   VerticalScrollBarVisibility="Auto">
@@ -59,9 +56,7 @@
                                         </StackPanel>
                                         </StackPanel>
                                 </suki:GlassCard>
-                                    
-                            
-                                
+ 
                                 <Button
                                     Command="{Binding SeleccionarImagenCommand}"
                                     Width="280"
@@ -85,8 +80,50 @@
                                             VerticalAlignment="Center"
                                             Foreground="DodgerBlue"
                                             FontSize="16"/>
-
                                     </StackPanel>
+                                </Button>
+                                
+                                <Button
+                                    Command="{Binding ObtenerImagenesCommand}"
+                                    Width="280"
+                                    Height="49"
+                                    Margin="0,18,0,0"
+                                    BorderBrush="DodgerBlue">
+
+                                    <StackPanel
+                                        Orientation="Horizontal"
+                                        HorizontalAlignment="Center"
+                                        Spacing="10">
+
+                                        <avalonia:MaterialIcon
+                                            Kind="FileUpload"
+                                            Width="18"
+                                            Height="18"
+                                            Foreground="DodgerBlue"/>
+
+                                        <TextBlock
+                                            Text="Obtener imagenes"
+                                            VerticalAlignment="Center"
+                                            Foreground="DodgerBlue"
+                                            FontSize="16"/>
+                                    </StackPanel>
+                                </Button>
+                                
+                                <ListBox  ItemsSource="{Binding ListaUrlImagenes}" WrapSelection="False">
+                                    <ListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <suki:GlassCard>
+                                                <asyncImageLoader:AdvancedImage
+                                                    Stretch="UniformToFill" Width="100" Height="100"
+                                                    Source="{Binding }" />
+                                            </suki:GlassCard>
+                                        </DataTemplate>
+                                    </ListBox.ItemTemplate>
+                                    
+                                </ListBox>
+                                
+                                <Button Command="{Binding IrAConsultasCommand}" Content="IR A CONSULTAS">
+                                    
                                 </Button>
                                 </StackPanel>
                             

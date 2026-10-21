@@ -1,0 +1,60 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:ControlAlmacen2.ViewModels"
+             xmlns:dialogHostAvalonia="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+             xmlns:suki="https://github.com/kikipoulet/SukiUI"
+             xmlns:asyncImageLoader="clr-namespace:AsyncImageLoader;assembly=AsyncImageLoader.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:DataType="viewmodels:ConsultasViewModel"
+             x:Class="ControlAlmacen2.Views.ConsultasView">
+    
+        
+
+    
+    <Interaction.Behaviors>
+        <EventTriggerBehavior EventName="Loaded">
+            <InvokeCommandAction Command="{Binding ObtenerComponentesCommand}"></InvokeCommandAction>
+        </EventTriggerBehavior>
+    </Interaction.Behaviors>
+    <StackPanel>
+        <dialogHostAvalonia:DialogHost ZIndex="3" Identifier="ComponenteDialog" CloseOnClickAway="True">
+            <dialogHostAvalonia:DialogHost.DialogContent/>
+        </dialogHostAvalonia:DialogHost>
+        <suki:GlassCard>
+            <StackPanel>
+                <TextBox Text="COMPONENTES"></TextBox>
+                <ListBox ItemsSource="{Binding ListaComponentes}" SelectedItem="{Binding SelectedComponente}">
+                    <Interaction.Behaviors>
+                        <EventTriggerBehavior EventName="DoubleTapped">
+                            <InvokeCommandAction Command="{Binding AbrirComponenteDialogoCommand }" />
+                        </EventTriggerBehavior>
+                    </Interaction.Behaviors>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <suki:GlassCard>
+                                <StackPanel Orientation="Horizontal">
+                                    <asyncImageLoader:AdvancedImage Margin="10 0" Width="100" Height="100"
+                                                                    Source="{Binding Id, StringFormat='http://192.168.29.12:11086/webhook/imgpredeterminada?nombre=default&amp;uidproducto={0}'}" />
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock Text="{Binding Id}"></TextBlock>
+                                        <TextBlock Text="{Binding Nombre}"></TextBlock>
+                                        <TextBlock Text="{Binding Descripcion}"></TextBlock>
+                                        <TextBlock Text="{Binding PrecioVenta}"></TextBlock>
+                                        <TextBlock Text="{Binding Activo}"></TextBlock>
+                                    </StackPanel>
+                                </StackPanel>
+                            </suki:GlassCard>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+
+            </StackPanel>
+        </suki:GlassCard>
+        <Button Content="IR A CREAR COMPONENTE"
+                Command="{Binding IrAAltaComponenteCommand}">
+        </Button>
+    </StackPanel>
+</UserControl>

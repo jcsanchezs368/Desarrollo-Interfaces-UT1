@@ -5,6 +5,8 @@
       <map>
         <entry key="ControlAlmacen2/App.axaml" value="ControlAlmacen2/ControlAlmacen2.csproj" />
         <entry key="ControlAlmacen2/Views/AltaComponenteView.axaml" value="ControlAlmacen2/ControlAlmacen2.csproj" />
+        <entry key="ControlAlmacen2/Views/ConsultasView.axaml" value="ControlAlmacen2/ControlAlmacen2.csproj" />
+        <entry key="ControlAlmacen2/Views/Dialogs/ComponenteDialog.axaml" value="ControlAlmacen2/ControlAlmacen2.csproj" />
         <entry key="ControlAlmacen2/Views/MainWindow.axaml" value="ControlAlmacen2/ControlAlmacen2.csproj" />
       </map>
     </option>

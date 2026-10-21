@@ -4,18 +4,19 @@
              xmlns:local="using:ControlAlmacen2"
              xmlns:avalonia="clr-namespace:Material.Icons.Avalonia;assembly=Material.Icons.Avalonia"
              xmlns:suki="https://github.com/kikipoulet/SukiUI"
-             RequestedThemeVariant="Default">
+             xmlns:dialogHostAvalonia1="clr-namespace:DialogHostAvalonia;assembly=DialogHost.Avalonia"
+             RequestedThemeVariant="Light">
              <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.DataTemplates>
         <local:ViewLocator />
     </Application.DataTemplates>
-
     <Application.Styles>
         <FluentTheme />
+        <suki:SukiTheme ThemeColor="Blue"/>
         <StyleInclude Source="avares://AsyncImageLoader.Avalonia/AdvancedImage.axaml" />
         <avalonia:MaterialIconStyles />
-        <suki:SukiTheme/>
-        
+        <dialogHostAvalonia1:DialogHostStyles />
+
     </Application.Styles>
 </Application>
