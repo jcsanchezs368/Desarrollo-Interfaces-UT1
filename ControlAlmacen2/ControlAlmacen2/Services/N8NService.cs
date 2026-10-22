@@ -26,6 +26,15 @@ public class N8NService
         return Guid.Parse(uidproducto);
     }
     
+    public async Task<bool> EditarComponente(Componente componente)
+    {
+        using HttpClient cliente = new();
+        var respuesta = await cliente.PatchAsJsonAsync(url+"/componente", componente);
+        respuesta.EnsureSuccessStatusCode();
+        var json = await respuesta.Content.ReadFromJsonAsync<JsonElement>();
+        return json.GetProperty("success").GetBoolean();
+    }
+    
     public async Task EnviarImagen(IStorageFile imagen, Guid uidproducto)
     {
         using HttpClient cliente = new();

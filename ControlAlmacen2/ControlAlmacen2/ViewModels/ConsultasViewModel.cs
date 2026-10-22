@@ -44,5 +44,10 @@ public partial class ConsultasViewModel : ViewModelBase
     {
         ListaComponentes = await _n8nService.ObtenerComponentes();
     }
-        
+
+    [RelayCommand]
+    public async Task EditarComponente()
+    {
+        await _n8nService.EditarComponente(SelectedComponente);
+    }
 }

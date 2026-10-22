@@ -9,6 +9,17 @@
              x:DataType="viewmodel:ConsultasViewModel"
              x:Class="ControlAlmacen2.Views.Dialogs.ComponenteDialog">
 
-
+    <StackPanel>
+        <TextBlock Text="EDITAR COMPONENTE"></TextBlock>
+        <TextBox Text="{Binding SelectedComponente.Id}" />
+        <TextBox Text="{Binding SelectedComponente.Codigo}" />
+        <TextBox Text="{Binding SelectedComponente.Nombre}" />
+        <TextBox Text="{Binding SelectedComponente.Descripcion}" />
+        <TextBox Text="{Binding SelectedComponente.Activo}" />
+        <TextBox Text="{Binding SelectedComponente.Stock}" />
+        <TextBox Text="{Binding SelectedComponente.PrecioVenta}" />
+        <Button Content="EDITAR" Command="{Binding EditarComponenteCommand}"></Button>
+        
+    </StackPanel>
     
 </UserControl>
