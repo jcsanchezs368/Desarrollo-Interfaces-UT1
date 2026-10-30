@@ -1,0 +1,92 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        
+        <Style Selector="HyperlinkButton.normal">
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Width" Value="300" />
+                <Setter Property="Height" Value="300" />
+                <Setter Property="Background">
+                        <Setter.Value>
+                                <ImageBrush Stretch="Fill" Source="avares://Estilos/Assets/boton.png" />
+                        </Setter.Value>
+                </Setter>
+        </Style>
+        
+        <Style Selector="HyperlinkButton.normal:pointover">
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="Width" Value="300" />
+                <Setter Property="Height" Value="300" />
+                <Setter Property="Background">
+                        <Setter.Value>
+                                <ImageBrush Stretch="Fill" Source="avares://Estilos/Assets/boton.png" />
+                        </Setter.Value>
+                </Setter>
+        </Style>
+        
+        <Style Selector="Button.cancelar">
+                <Setter Property="Background" Value="LightCoral"/>
+                <Setter Property="FontWeight" Value="Bold" />
+        </Style>
+        
+        <Style Selector="Button.animado">
+                <Setter Property="Background" Value="Cyan"></Setter>
+        </Style>
+        
+        <Style Selector="Button.animado:pointerover">
+                <Setter Property="Background" Value="Red"></Setter>
+        </Style>
+        
+        <Style Selector="Button.HoverButton">
+                <Setter Property="Background" Value="LightGray"/>
+                <Setter Property="Foreground" Value="Black"/>
+        </Style>
+
+        <!-- Estilo cuando el puntero está sobre el botón -->
+        <Style Selector="Button.HoverButton:pointerover">
+                <Setter Property="Background" Value="LightGreen"/>
+                <Setter Property="Foreground" Value="Black"/>
+        </Style>
+        
+        <Style Selector="Button.animado:pressed">
+                <Setter Property="Background" Value="Red"></Setter>
+        </Style>
+        
+        <Style Selector="Button.zoom">
+                <Setter Property="RenderTransform" Value="scale(1)"></Setter>
+                <Setter Property="Transitions">
+                        <Transitions>
+                                <TransformOperationsTransition Property="RenderTransform" Duration="0:0:0.3"/>
+                                
+                        </Transitions>
+                </Setter>
+        </Style>
+        
+        <Style Selector="Button.zoom:pointerover">
+                <Setter Property="RenderTransform" Value="scale(1.5)"></Setter>
+        </Style>
+        
+        <Style Selector="Button.balanceo">
+                <Style.Animations>
+                        <Animation Duration="0:0:0.8" IterationCount="INFINITE" Easing="SineEaseInOut">
+                                <KeyFrame Cue="0%">
+                                        <Setter Property="RotateTransform.Angle" Value="-10" />
+                                        <Setter Property="ScaleTransform.ScaleX" Value="1.1" />
+                                        <Setter Property="ScaleTransform.ScaleY" Value="1.1" />
+                                </KeyFrame>
+                                
+                                <KeyFrame Cue="50%">
+                                        <Setter Property="RotateTransform.Angle" Value="10" />
+                                        <Setter Property="ScaleTransform.ScaleX" Value="1.1" />
+                                        <Setter Property="ScaleTransform.ScaleY" Value="1.1" />
+                                </KeyFrame>
+                                
+                                <KeyFrame Cue="100%">
+                                        <Setter Property="RotateTransform.Angle" Value="-10" />
+                                        <Setter Property="ScaleTransform.ScaleX" Value="1.1" />
+                                        <Setter Property="ScaleTransform.ScaleY" Value="1.1" />
+                                </KeyFrame>
+                        </Animation>
+                </Style.Animations>
+        </Style>
+    
+</Styles>

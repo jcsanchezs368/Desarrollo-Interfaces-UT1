@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Estilos/App.axaml" value="Estilos/Estilos.csproj" />
+        <entry key="Estilos/Styles/Estilos.axaml" value="Estilos/Estilos.csproj" />
+        <entry key="Estilos/Views/MainWindow.axaml" value="Estilos/Estilos.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
